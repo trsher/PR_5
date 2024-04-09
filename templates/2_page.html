@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Программа фестиваля - Фестиваль "Мир Сибири"</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+  <header>
+    <h1>Программа фестиваля</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Музыка</a></li>
+      <li><a href="#">Ремесла</a></li>
+      <li><a href="#">Площадки фестиваля</a></li>
+      <li><a href="first#" class="active">О фестивале</a></li> 
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Программа фестиваля</h2>
+        <table class="table">
+            <tr>
+                <th>Время</th>
+                <th>Мероприятие</th>
+                <th>Место</th>
+		    </tr>
+          {% for row1, row2, row3 in test %}
+            <tr>
+                <td> {{ row1 }}</td>
+                <td> {{ row2 }}</td>
+                <td> {{ row3 }}</td>
+            </tr> 
+          {% endfor %}
+        </table>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Подготовил: Васильев Данил Алексеевич. "Программист, но не фронтэнд"</p>
+  </footer>
+</body>
+</html>
